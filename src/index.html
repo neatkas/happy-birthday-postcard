@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="../resources/img/cake_small.png" />
+    <title>Поздравление с днем рождения</title>
+    <style>
+        html {
+            height: 100vh;
+        }
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+        }
+        h1 {
+            text-align: center;
+            color: #2c42e8;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .wish {
+            width: 40%;
+            margin: 0 auto;
+            padding: 0px 28px 20px 28px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 35px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .wish > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="wish" id="wish-id">
+        <div>
+            <img src="../resources/img/flags_.png" alt="флажки">
+        </div>
+        <h1>Поздравляем с днем рождения!</h1>
+        <p>Пусть каждая птичка на этой страничке станет символом тысячи счастливых моментов в будущем году!
+            Желаем здоровья, счастья, исполнения мечт 🎉 Пусть всегда будет хорошее настроение и много вкусностей 😊</p>
+        <div>
+            <img src="../resources/img/cake.png" width="300" alt="тут будет тортик">
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script>
+    window.onload = function() {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+    };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+<script>
+    VANTA.BIRDS({
+      el: "html",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0xd0f0ff,
+      color1: 0x2c42e8,
+      color2: 0x1cedbb,
+      birdSize: 0.80,
+      wingSpan: 20.00,
+      separation: 49.00,
+      cohesion: 17.00
+    })
+</script>
+</body>
+</html>
